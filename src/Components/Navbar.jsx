@@ -35,7 +35,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex justify-between items-center w-10/12 mx-auto px-6 py-4 border border-yellow-700">
+      <nav className="flex justify-between items-center w-10/12 mx-auto px-6 py-4 border border-yellow-700 ">
         <h1 className="text-xl font-bold">Next Hero</h1>
         <ul className="flex items-center text-xl font-semibold gap-5">
           {links.map((link) => (

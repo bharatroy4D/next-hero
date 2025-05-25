@@ -1,17 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
     return (
-        <div>
+        <div className='w-10/12 mx-auto'>
             Blogs pages
 
-            <div className='grid grid-cols-3 gap-6'>
+            <div className='grid grid-cols-3 gap-6 '>
                 {
                     blogs.map(blog => (
                         <div key={blog.slug} className='border rounded p-5'>
                             <h1>{blog.title}</h1>
                             <h1 className='py-4'>{blog.description}</h1>
-                            <button className='border rounded p-3'>View Details</button>
+                            <Link href={`/blogs/${blog.slug}`}>
+                                <button className='border rounded p-2 bg-cyan-400 text-black'>View Details</button>
+                            </Link>
                         </div>
                     ))
                 }
